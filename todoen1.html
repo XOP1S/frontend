@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        padding: 14px 20px;
+      }
+
+      header {
+        padding: 10px;
+        background-color: white;
+        text-align: center;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: row;
+        background-color: orange;
+        gap: 10rem;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      aside {
+        flex: 35px;
+        background-color: white;
+        margin-bottom: 5px;
+      }
+
+      .menuaside {
+        text-align: center;
+        background-color: orange;
+        color: white;
+        font-size: 10px;
+        padding: 1px;
+        margin-top: 2px;
+      }
+
+      aside ul {
+        padding-left: 10px;
+        text-align: left;
+        margin-top: 60px;
+      }
+
+      .menul {
+        list-style: none;
+        position: relative;
+      }
+
+      .menul:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 2px;
+        width: 3px;
+        height: 40px;
+        background-color: orange;
+        transform: translateY(-50%);
+      }
+
+      section {
+        margin-top: 15px;
+        margin-left: 30px;
+        margin-right: 30px;
+        flex: 65%;
+        padding: 20px;
+        background-color: white;
+        margin-bottom: 5px;
+      }
+
+      .form {
+        display: flex;
+        text-align: justify;
+      }
+
+      .crea {
+        flex: 30px;
+      }
+
+      .docente {
+        flex: 40%;
+      }
+
+      table,
+      th,
+      td {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      th {
+        padding: 5px;
+      }
+
+      td {
+        height: 15px;
+      }
+
+      main {
+        background-color: gainsboro;
+      }
+
+      .formcontainer {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        grid-gap: 30px;
+        gap: 30px;
+      }
+
+      .formcontainer .box {
+        width: 100%;
+        position: relative;
+      }
+
+      .formcontainer .box input {
+        width: 100%;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body class="mainbox">
+    <header></header>
+    <nav>
+      <a href="" class="nav-link">Tutorias</a>
+      <a href="" class="nav-link">Estudiantes</a>
+      <a href="" class="nav-link">Proyecto de Aula</a>
+      <a href="" class="nav-link">Asignatura</a>
+      <a href="" class="nav-link">Profesores</a>
+      <a href="" class="nav-link">Notas</a>
+    </nav>
+    <main class="row">
+      <aside>
+        <div class="menuaside">
+          <h2>Menu</h2>
+        </div>
+        <ul class="menul">
+          <li>Gestionar Profesores</li>
+        </ul>
+        <ul class="menul">
+          <li>Matricular Estudiante</li>
+        </ul>
+        <ul class="menul">
+          <li>Asignar Coordinador PA</li>
+        </ul>
+        <ul class="menul">
+          <li>Gestionar Asignaturas</li>
+        </ul>
+        <ul class="menul">
+          <li>Gestionar Seciones</li>
+        </ul>
+        <ul class="menul">
+          <li>Asignacion Academica</li>
+        </ul>
+        <ul class="menul">
+          <li>Resultados de Aprendizaje</li>
+        </ul>
+      </aside>
+      <section>
+        <div class="form">
+          <h2 class="crea">Crea Profesores</h2>
+          <h4 class="docente">
+            Un docente universitario es un profesional que se dedica a la
+            enseñanza en el nivel superior principal responsabilidad es impartir
+            conocimientos y habilidades a los estudiantes, fomentando su
+            desarrollo academico y profesional.
+          </h4>
+        </div>
+        <hr />
+        <form action="get">
+          <div class="formcontainer">
+            <div class="box">
+              <label for="iname">Primer Nombre</label>
+              <input id="iname" type="text" />
+            </div>
+            <div class="box">
+              <label for="isurname">Primer Apellido</label>
+              <input id="isurname" type="text" />
+            </div>
+            <div class="box">
+              <label for="sname">Segundo Nombre</label>
+              <input id="sname" type="text" />
+            </div>
+            <div class="box">
+              <label for="ssurname">Segundo Apellido</label>
+              <input id="ssurname" type="text" />
+            </div>
+            <div class="box2">
+              <label for="genero">Genero</label>
+              <br />
+              <input id="Masculino" type="radio" name="genero" />
+              <label for="Masculino">Masculino</label>
+              <input id="Femenino" type="radio" name="genero" />
+              <label for="Femenino">Femenino</label>
+            </div>
+            <div class="box2">
+              <label for="tipocontr">Tipo de contrato</label>
+              <br />
+              <input id="tiemcompl" type="radio" name="tipocontr" />
+              <label for="tiemcompl">Tiempo Completo</label>
+              <input id="medtiem" type="radio" name="tipocontr" />
+              <label for="medtiem">Medio Tiempo</label>
+              <input id="cuarto" type="radio" name="tipocontr" />
+              <label for="cuarto">3/4 de Tiempo</label>
+              <input id="catedra" type="radio" name="tipocontr" />
+              <label for="catedra">Catedra</label>
+            </div>
+            <div class="box2">
+              <label for="tipoid">Tipo de Identificacion</label>
+              <br />
+              <input id="ti" type="radio" name="tipoid" />
+              <label for="ti">TI</label>
+              <input id="cc" type="radio" name="tipoid" />
+              <label for="cc">cc</label>
+              <input id="ce" type="radio" name="tipoid" />
+              <label for="ce">CE</label>
+            </div>
+            <div class="box">
+              <label for="ident">Identificacion</label>
+              <input id="ident" type="text" />
+            </div>
+            <div class="box">
+              <label for="email">Email</label>
+              <input id="email" type="text" />
+            </div>
+            <div class="box">
+              <label for="telf">Telefono</label>
+              <input id="telf" type="text" />
+            </div>
+            <div class="box">
+              <label for="dire">Direccion</label>
+              <input id="dire" type="text" />
+            </div>
+          </div>
+        </form>
+        <table>
+          <tr>
+            <th>Primer Nombre</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Nombre</th>
+            <th>Segundo Apellido</th>
+            <th>Genero</th>
+            <th>Tipo de contrato</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <h2></h2>
+    </footer>
+  </body>
+</html>
