@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8" />
@@ -30,5 +30,4 @@
 </ul>
 
 </body>
-</html>
-![image](https://github.com/XOP1S/frontend/assets/74336560/45bda040-5661-43fd-a47a-4afb8f6e5572)
+</html> -->
